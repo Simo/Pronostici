@@ -1,0 +1,12 @@
+<% title "Leg" %>
+
+<p>
+  <strong>Desc:</strong>
+  <%= @leg.desc %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_leg_path(@leg) %> |
+  <%= link_to "Destroy", @leg, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", legs_path %>
+</p>

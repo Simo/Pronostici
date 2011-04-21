@@ -1,0 +1,13 @@
+one:
+  champion_id: 1
+  nome_turno: MyString
+  nome_breve: MyString
+  leg_id: 1
+  data: 2011-04-08
+
+two:
+  champion_id: 1
+  nome_turno: MyString
+  nome_breve: MyString
+  leg_id: 1
+  data: 2011-04-08

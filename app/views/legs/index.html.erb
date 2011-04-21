@@ -1,0 +1,17 @@
+<% title "Legs" %>
+
+<table>
+  <tr>
+    <th>Desc</th>
+  </tr>
+  <% for leg in @legs %>
+    <tr>
+      <td><%= leg.desc %></td>
+      <td><%= link_to "Show", leg %></td>
+      <td><%= link_to "Edit", edit_leg_path(leg) %></td>
+      <td><%= link_to "Destroy", leg, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Leg", new_leg_path %></p>

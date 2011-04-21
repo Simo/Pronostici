@@ -1,0 +1,20 @@
+<% title "Champion" %>
+
+<p>
+  <strong>Nome Campionato:</strong>
+  <%= @champion.nome_campionato %>
+</p>
+<p>
+  <strong>Priority:</strong>
+  <%= @champion.priority %>
+</p>
+<p>
+  <strong>Ambito:</strong>
+  <%= @champion.ambito %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_champion_path(@champion) %> |
+  <%= link_to "Destroy", @champion, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", champions_path %>
+</p>

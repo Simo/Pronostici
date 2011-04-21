@@ -1,0 +1,25 @@
+<% title "Rounds" %>
+
+<table>
+  <tr>
+    <th>Champion</th>
+    <th>Nome Turno</th>
+    <th>Nome Breve</th>
+    <th>Leg</th>
+    <th>Data</th>
+  </tr>
+  <% for round in @rounds %>
+    <tr>
+      <td><%= round.champion.nome_campionato %></td>
+      <td><%= round.nome_turno %></td>
+      <td><%= round.nome_breve %></td>
+      <td><%= round.leg_id %></td>
+      <td><%= round.data %></td>
+      <td><%= link_to "Show", round %></td>
+      <td><%= link_to "Edit", edit_round_path(round) %></td>
+      <td><%= link_to "Destroy", round, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Round", new_round_path %></p>

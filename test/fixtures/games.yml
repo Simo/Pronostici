@@ -1,0 +1,13 @@
+one:
+  round_id: 1
+  home_team_id: 1
+  away_team_id: 1
+  codfip: 1
+  result: MyString
+
+two:
+  round_id: 1
+  home_team_id: 1
+  away_team_id: 1
+  codfip: 1
+  result: MyString

@@ -1,0 +1,28 @@
+<% title "Round" %>
+
+<p>
+  <strong>Champion:</strong>
+  <%= @round.champion_id %>
+</p>
+<p>
+  <strong>Nome Turno:</strong>
+  <%= @round.nome_turno %>
+</p>
+<p>
+  <strong>Nome Breve:</strong>
+  <%= @round.nome_breve %>
+</p>
+<p>
+  <strong>Leg:</strong>
+  <%= @round.leg_id %>
+</p>
+<p>
+  <strong>Data:</strong>
+  <%= @round.data %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_round_path(@round) %> |
+  <%= link_to "Destroy", @round, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", rounds_path %>
+</p>

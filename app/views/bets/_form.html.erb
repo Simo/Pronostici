@@ -1,0 +1,20 @@
+<%= form_for @bet do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :game_id %><br />
+    <%= f.text_field :game_id %>
+  </p>
+  <p>
+    <%= f.label :round_id %><br />
+    <%= f.text_field :round_id %>
+  </p>
+  <p>
+    <%= f.label :champion_id %><br />
+    <%= f.text_field :champion_id %>
+  </p>
+  <p>
+    <%= f.label :bid %><br />
+    <%= f.radio_button :bid, "1" %>  <%= f.radio_button :bid, "2" %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

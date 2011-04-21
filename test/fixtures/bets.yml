@@ -1,0 +1,11 @@
+one:
+  game_id: 1
+  round_id: 1
+  champion_id: 1
+  bid: MyString
+
+two:
+  game_id: 1
+  round_id: 1
+  champion_id: 1
+  bid: MyString

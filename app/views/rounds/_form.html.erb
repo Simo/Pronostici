@@ -1,0 +1,24 @@
+<%= form_for @round do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :champion_id %><br />
+    <%= f.text_field :champion_id %>
+  </p>
+  <p>
+    <%= f.label :nome_turno %><br />
+    <%= f.text_field :nome_turno %>
+  </p>
+  <p>
+    <%= f.label :nome_breve %><br />
+    <%= f.text_field :nome_breve %>
+  </p>
+  <p>
+    <%= f.label :leg_id %><br />
+    <%= f.text_field :leg_id %>
+  </p>
+  <p>
+    <%= f.label :data %><br />
+    <%= f.date_select :data %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

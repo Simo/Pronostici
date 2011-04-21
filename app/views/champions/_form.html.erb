@@ -1,0 +1,16 @@
+<%= form_for @champion do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :nome_campionato %><br />
+    <%= f.text_field :nome_campionato %>
+  </p>
+  <p>
+    <%= f.label :priority %><br />
+    <%= f.text_field :priority %>
+  </p>
+  <p>
+    <%= f.label :ambito %><br />
+    <%= f.text_field :ambito %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

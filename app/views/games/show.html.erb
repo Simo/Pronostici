@@ -1,0 +1,28 @@
+<% title "Game" %>
+
+<p>
+  <strong>Round:</strong>
+  <%= @game.round_id %>
+</p>
+<p>
+  <strong>Home Team:</strong>
+  <%= @game.home_team_id %>
+</p>
+<p>
+  <strong>Away Team:</strong>
+  <%= @game.away_team_id %>
+</p>
+<p>
+  <strong>Codfip:</strong>
+  <%= @game.codfip %>
+</p>
+<p>
+  <strong>Result:</strong>
+  <%= @game.result %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_game_path(@game) %> |
+  <%= link_to "Destroy", @game, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", games_path %>
+</p>

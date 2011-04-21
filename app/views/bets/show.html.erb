@@ -1,0 +1,24 @@
+<% title "Bet" %>
+
+<p>
+  <strong>Game:</strong>
+  <%= @bet.game_id %>
+</p>
+<p>
+  <strong>Round:</strong>
+  <%= @bet.round_id %>
+</p>
+<p>
+  <strong>Champion:</strong>
+  <%= @bet.champion_id %>
+</p>
+<p>
+  <strong>Bid:</strong>
+  <%= @bet.bid %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_bet_path(@bet) %> |
+  <%= link_to "Destroy", @bet, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", bets_path %>
+</p>

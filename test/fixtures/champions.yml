@@ -1,0 +1,9 @@
+one:
+  nome_campionato: 
+  priority: 1
+  ambito: MyString
+
+two:
+  nome_campionato: 
+  priority: 1
+  ambito: MyString

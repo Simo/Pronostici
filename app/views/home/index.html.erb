@@ -1,0 +1,15 @@
+<% @campionati.each do |f| %>
+	<div>
+		<%= link_to f.nome_campionato, f %>
+			<div class="turni">
+					<% f.rounds.each do |r| %>
+						<div>
+							<%= link_to r.nome_turno, giornata_path(:cmp => "#{r.champion_id}",:trn => "#{r.id}"), :remote => true%>
+						</div>
+					<% end %>
+			</div>
+	</div>
+<% end %>
+
+<div id="schedina">
+</div>	

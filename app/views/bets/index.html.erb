@@ -1,0 +1,23 @@
+<% title "Bets" %>
+
+<table>
+  <tr>
+    <th>Game</th>
+    <th>Round</th>
+    <th>Champion</th>
+    <th>Bid</th>
+  </tr>
+  <% for bet in @bets %>
+    <tr>
+      <td><%= bet.game_id %></td>
+      <td><%= bet.round_id %></td>
+      <td><%= bet.champion_id %></td>
+      <td><%= bet.bid %></td>
+      <td><%= link_to "Show", bet %></td>
+      <td><%= link_to "Edit", edit_bet_path(bet) %></td>
+      <td><%= link_to "Destroy", bet, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Bet", new_bet_path %></p>
