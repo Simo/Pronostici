@@ -1,19 +1,23 @@
 class HomeController < ApplicationController
-  def index
+	
+  def index  	
   	@campionati = Champion.order(:priority)
   end
 	
   def giornata
   	@giornata = Round.find(params[:trn])
   	@partite = Game.where(:round_id => params[:trn])
-    @bets = Array.new(@partite.size)
-    @squadre_casa = Array.new(@partite.size)
+    @bets = Array.new(@partite.size)					#generiamo un array per contenere le scommesse da giocare per quel turno, per quel campionato
+    @squadre_casa = Array.new(@partite.size)			#generiamo una serie di array per portarci dietro dati aggiuntivi delle partite
     @squadre_casa_sponsor = Array.new(@partite.size)
     @squadre_fuori = Array.new(@partite.size)
     @squadre_fuori_sponsor = Array.new(@partite.size)
   	
   	@j = 0
   	@i = 0
+  	
+  	
+  	#carichiamo gli array per i vari loop all'interno delle schedine
   	
   	@partite.each do |p|
          @squadre_casa[@i]= p.home_team.nome

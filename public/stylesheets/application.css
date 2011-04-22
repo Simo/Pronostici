@@ -6,3 +6,8 @@
 	display: inline;
 	font-style: italic;
 }
+
+.font_titolo {
+	font-family: ReklameScript-RegularDEMO;
+	font-size: 3em;
+}
