@@ -7,6 +7,9 @@ class CreateBets < ActiveRecord::Migration
       t.string :bid
       t.timestamps
     end
+    add_index :bets, :game_id
+    add_index :bets, :round_id
+    add_index :bets, :champion_id
   end
 
   def self.down

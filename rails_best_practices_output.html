@@ -1,0 +1,274 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <meta charset='UTF-8' />
+    <title>Output of rails_best_practices</title>
+    <style type='text/css'>
+      /*<![CDATA[*/
+        body {
+          color: #333;
+          background: #eee;
+          padding: 0 20px;
+        }
+        h1 {
+          color: ##4E4E4E;
+        }
+        table {
+          background: white;
+          border: 1px solid #666;
+          border-collapse: collapse;
+          margin: 20px 0;
+          font-size: 14px;
+        }
+        table th, table td {
+          padding: 4px;
+          border: 1px solid #D0D0D0;
+        }
+        table th {
+          background-color: #DFC;
+          color: #337022;
+        }
+        table td.filename {
+          color: #ED1556;
+        }
+        table tr:hover {
+          background-color: #FFFFC0;
+        }
+      /*]]>*/
+    </style>
+  </head>
+  <body>
+    <h1>rails_best_practices output</h1>
+    <h2>
+      Please go to
+      <a href='http://rails-bestpractices.com' target='_blank'>http://rails-bestpractices.com</a>
+      to see more useful Rails Best Practices.
+    </h2>
+    <h2>
+      Found 24 errors.
+    </h2>
+    <table>
+      <tr>
+        <th>Filename</th>
+        <th>Line Number</th>
+        <th>Error Message</th>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./app/controllers/home_controller.rb
+        </td>
+        <td class='line-number'>6</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/7-move-model-logic-into-the-model' target='_blank'>move model logic into model (@partite use_count > 4)</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./app/controllers/home_controller.rb
+        </td>
+        <td class='line-number'>6</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/7-move-model-logic-into-the-model' target='_blank'>move model logic into model (p use_count > 4)</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./app/views/rounds/index.html.erb
+        </td>
+        <td class='line-number'>12</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/15-the-law-of-demeter' target='_blank'>law of demeter</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./db/schema.rb
+        </td>
+        <td class='line-number'>15</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/21-always-add-db-index' target='_blank'>always add db index (bets => [game_id])</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./db/schema.rb
+        </td>
+        <td class='line-number'>15</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/21-always-add-db-index' target='_blank'>always add db index (bets => [round_id])</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./db/schema.rb
+        </td>
+        <td class='line-number'>15</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/21-always-add-db-index' target='_blank'>always add db index (bets => [champion_id])</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./db/schema.rb
+        </td>
+        <td class='line-number'>32</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/21-always-add-db-index' target='_blank'>always add db index (games => [round_id])</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./db/schema.rb
+        </td>
+        <td class='line-number'>32</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/21-always-add-db-index' target='_blank'>always add db index (games => [home_team_id])</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./db/schema.rb
+        </td>
+        <td class='line-number'>32</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/21-always-add-db-index' target='_blank'>always add db index (games => [away_team_id])</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./db/schema.rb
+        </td>
+        <td class='line-number'>48</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/21-always-add-db-index' target='_blank'>always add db index (rounds => [champion_id])</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./db/schema.rb
+        </td>
+        <td class='line-number'>48</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/21-always-add-db-index' target='_blank'>always add db index (rounds => [leg_id])</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./app/controllers/bets_controller.rb
+        </td>
+        <td class='line-number'>6,23,27,36</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/22-use-before_filter' target='_blank'>use before_filter for show,edit,update,destroy</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./app/controllers/champions_controller.rb
+        </td>
+        <td class='line-number'>6,23,27,36</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/22-use-before_filter' target='_blank'>use before_filter for show,edit,update,destroy</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./app/controllers/games_controller.rb
+        </td>
+        <td class='line-number'>6,23,27,36</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/22-use-before_filter' target='_blank'>use before_filter for show,edit,update,destroy</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./app/controllers/legs_controller.rb
+        </td>
+        <td class='line-number'>6,23,27,36</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/22-use-before_filter' target='_blank'>use before_filter for show,edit,update,destroy</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./app/controllers/rounds_controller.rb
+        </td>
+        <td class='line-number'>6,23,27,36</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/22-use-before_filter' target='_blank'>use before_filter for show,edit,update,destroy</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./app/controllers/teams_controller.rb
+        </td>
+        <td class='line-number'>6,23,27,36</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/22-use-before_filter' target='_blank'>use before_filter for show,edit,update,destroy</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./app/controllers/home_controller.rb
+        </td>
+        <td class='line-number'>33</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/60-remove-trailing-whitespace' target='_blank'>remove trailing whitespace</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./app/views/devise/sessions/new.html.erb
+        </td>
+        <td class='line-number'>1</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/60-remove-trailing-whitespace' target='_blank'>remove trailing whitespace</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./app/views/home/_giornata.html.erb
+        </td>
+        <td class='line-number'>6</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/60-remove-trailing-whitespace' target='_blank'>remove trailing whitespace</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./app/views/home/giornata.html.erb
+        </td>
+        <td class='line-number'>6</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/60-remove-trailing-whitespace' target='_blank'>remove trailing whitespace</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./app/views/layouts/application.html.erb
+        </td>
+        <td class='line-number'>16</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/60-remove-trailing-whitespace' target='_blank'>remove trailing whitespace</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./config/environments/development.rb
+        </td>
+        <td class='line-number'>25</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/60-remove-trailing-whitespace' target='_blank'>remove trailing whitespace</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./config/routes.rb
+        </td>
+        <td class='line-number'>17</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/60-remove-trailing-whitespace' target='_blank'>remove trailing whitespace</a>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
