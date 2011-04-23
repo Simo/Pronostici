@@ -10,7 +10,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110422074900) do
+ActiveRecord::Schema.define(:version => 20110423095415) do
+
+  create_table "authentications", :force => true do |t|
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "bets", :force => true do |t|
     t.integer  "game_id"
@@ -20,6 +26,10 @@ ActiveRecord::Schema.define(:version => 20110422074900) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "bets", ["champion_id"], :name => "index_bets_on_champion_id"
+  add_index "bets", ["game_id"], :name => "index_bets_on_game_id"
+  add_index "bets", ["round_id"], :name => "index_bets_on_round_id"
 
   create_table "champions", :force => true do |t|
     t.string   "nome_campionato"
@@ -76,10 +86,7 @@ ActiveRecord::Schema.define(:version => 20110422074900) do
     t.datetime "updated_at"
     t.string   "username"
   end
-  
-  add_index "bets", :game_id
-  add_index "bets", :round_id
-  add_index "bets", :champion_id
+
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
 

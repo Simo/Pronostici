@@ -1,4 +1,9 @@
 PronosticiR3::Application.routes.draw do
+  
+  match '/auth/:provider/callback' => 'authentications#create'
+  
+  resources :authentications
+
   devise_for :users
 
   get "home/index"
