@@ -4,7 +4,8 @@ class AuthenticationsController < ApplicationController
   end
 
   def create
-    auth = request.env["rack.auth"]
+    #render :text => request.env["omniauth.auth"].to_yaml
+    auth = request.env["omniauth.auth"]
     current_user.authentications.find_or_create_by_provider_and_uid(auth['provider'], auth['uid'])
     flash[:notice] = "Authentication successful."
     redirect_to authentications_url
