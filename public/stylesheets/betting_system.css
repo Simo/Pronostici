@@ -1,0 +1,27 @@
+ul {
+	list-style: none;
+}
+
+li {
+	width: 100%;
+}
+
+.squadra_casa {
+	font-size: 0.8em;
+	display: inline-block;
+	width: 200px;
+}
+
+.versus {
+	display: inline-block;
+}
+
+.squadra_fuori {
+	font-size: 0.8em;
+	display: inline-block;
+	width: 200px;
+}
+
+.scommessa {
+	display: inline;
+}

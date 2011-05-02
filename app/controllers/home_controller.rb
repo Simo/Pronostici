@@ -2,6 +2,13 @@ class HomeController < ApplicationController
 	
   def index  	
   	@campionati = Champion.order(:priority)
+  	
+  	if current_user
+  		
+  	else
+  		redirect_to  new_user_session_path
+  	end
+  
   end
 	
   def giornata

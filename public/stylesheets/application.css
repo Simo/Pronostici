@@ -1,3 +1,14 @@
+@import url('/stylesheets/border.css');
+
+
+#wrapper {
+	width: 60em;
+}
+
+#container {
+	width: 100%
+}
+
 .turni {
 	text-indent: 1em;
 }
@@ -10,4 +21,9 @@
 .font_titolo {
 	font-family: ReklameScript-RegularDEMO;
 	font-size: 3em;
+}
+
+.separa {
+	height: 1em;
+	display: block;
 }

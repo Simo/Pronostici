@@ -1,0 +1,20 @@
+#benvenuto_sx {
+	display: inline-block;
+	width: 478px;
+}
+
+#benvenuto_dx {
+	display: inline-block;
+	width: 478px;
+}
+
+input {
+    /*background: url("images/weissRauschen.jpg") repeat scroll 0 0 transparent;*/
+    border: 1px solid #D8D8D0;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 0 2px #DBD9CF inset;
+    color: #827D6C;
+    font-size: 16px;
+    padding: 10px;
+    width: 218px;
+}
