@@ -3,6 +3,8 @@
 
 #wrapper {
 	width: 60em;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 #container {
@@ -24,6 +26,6 @@
 }
 
 .separa {
-	height: 1em;
+	height: 0.6em;
 	display: block;
 }

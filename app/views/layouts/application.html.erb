@@ -1,4 +1,5 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <html>
 <head>
   <title><%= content_for?(:title) ? yield(:title) : "Pronostici" %></title>
@@ -58,27 +59,24 @@
 				<% end %>
 			
 				<a href="/auth/twitter" class="auth_provider">
-				  <%= image_tag "twitter_64.png", :size => "32x32", :alt => "Twitter" %>
-				  Twitter
+				  <%= image_tag "twitter.png", :size => "82x82", :alt => "Twitter" %>
 				</a>
 				<a href="/auth/facebook" class="auth_provider">
-				  <%= image_tag "facebook_64.png", :size => "32x32", :alt => "Facebook" %>
-				  Facebook
+				  <%= image_tag "facebook.png", :size => "82x82", :alt => "Facebook" %>
 				</a>
 				<a href="/auth/google_apps" class="auth_provider">
-				  <%= image_tag "google_64.png", :size => "32x32", :alt => "Google" %>
-				  Google
+				  <%= image_tag "google.png", :size => "82x82", :alt => "Google" %>
 				</a>
-				<a href="/auth/open_id" class="auth_provider">
+				<!-- ><a href="/auth/open_id" class="auth_provider">
 				  <%= image_tag "openid_64.png", :size => "32x32", :alt => "OpenID" %>
 				  OpenID
-				</a>
+				</a> -->
 				<div class="clear"></div>
 				<% end %>
 		</div>
 	</div><!-- fine wrapper -->
-	
-<!-- <script type="text/javascript">
+<!--	
+<script type="text/javascript">
 //change this to true to enable troubleshooting mode
 var myfont_webfont_test = false;
 // change this to false if you're having trouble with WOFFs
