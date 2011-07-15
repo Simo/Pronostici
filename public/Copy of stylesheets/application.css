@@ -1,0 +1,28 @@
+#headerUP {
+	height: 25px;
+	background-color: #F8dd00;
+}
+
+#headerDOWN {
+	height: 50px;
+	background-color: #000011;
+	color: #CCCCCC;
+}
+
+#headerDOWN a{
+	color: #CCCCCC;
+}
+
+.turni {
+	text-indent: 1em;
+}
+
+.sponsor {
+	display: inline;
+	font-style: italic;
+}
+
+.font_titolo {
+	font-family: ReklameScript-RegularDEMO;
+	font-size: 3em;
+}
