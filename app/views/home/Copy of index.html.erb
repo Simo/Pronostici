@@ -1,9 +1,9 @@
-<div class="spazio50 span-1 last"></div>
+<div class="spazio25 span-1 last"></div>
 <div id="barraSX" class="span-3">	
 	<% unless user_signed_in? %>
 		<%= render '/devise/sessions/form' %>
 	<% else %>
-		<!-- <% @campionati.each do |f| %>
+		<% @campionati.each do |f| %>
 			<%= link_to f.nome_campionato, f %>
 				<div class="campionato">
 						<% f.rounds.each do |r| %>
@@ -13,18 +13,6 @@
 						<% end %>
 				</div>
 		<% end %>
-		
-		<hr />
-		-->
-		<div class="campionati">
-			<ul>
-				<% @campionati.each do |f| %>
-					<li>
-						<%= link_to f.nome_campionato, giornata_path(:cmp => "#{f.id}"), :remote => true %>
-					</li>	
-				<% end %>
-			</ul>
-		</div>
 	<% end %>
 </div>
 	

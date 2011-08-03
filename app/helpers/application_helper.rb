@@ -16,5 +16,24 @@ module ApplicationHelper
   def javascript(*args)
     content_for(:head) { javascript_include_tag(*args) }
   end
+  
+  def flash_messages
+    %w(notice warning error).each do |msg|
+      concat content_tag(:div, content_tag(:p, flash[msg.to_sym]),
+        :class => "#{msg}") unless flash[msg.to_sym].blank?
+    end
+  end
+  
+    def resource_name
+    :user
+  end
+ 
+  def resource
+    @resource ||= User.new
+  end
+ 
+  def devise_mapping
+    @devise_mapping ||= Devise.mappings[:user]
+  end
 	
 end

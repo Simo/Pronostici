@@ -1,0 +1,31 @@
+label {
+	font-family:Verdana, Geneva, Arial, Helvetica, sans-serif;
+	color: #827D6C;
+    font-size: 1.2em;
+}
+
+input {
+    /*background: url("images/weissRauschen.jpg") repeat scroll 0 0 transparent;*/
+    border: 1px solid #303030;
+    border-radius: 5px 5px 5px 5px;
+    /*box-shadow: 0 0 2px #DBD9CF inset;*/
+    font-size: 1.25em;
+    padding: 10px;
+    width: 200px;
+
+input[type="checkbox"] {
+	width: 1em;
+	display: inline;
+}
+
+input[type="submit"] {
+	
+}
+
+input[type="email"] {
+	color: #529214;
+}
+
+input[type="password"] {
+	
+}

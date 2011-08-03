@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'KaratulaNormal';
+    src: url('http://localhost:3000/fonts/KARAN___-webfont.eot');
+    src: url('http://localhost:3000/fonts/KARAN___-webfont.eot?#iefix') format('embedded-opentype'),
+         url('http://localhost:3000/fonts/KARAN___-webfont.woff') format('woff'),
+         url('http://localhost:3000/fonts/KARAN___-webfont.ttf') format('truetype'),
+         url('http://localhost:3000/fonts/KARAN___-webfont.svg#KaratulaNormal') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GraublauWeb';
+    src: url('http://localhost:3000/fonts/graublauweb-webfont.eot');
+    src: url('http://localhost:3000/fonts/graublauweb-webfont.eot?#iefix') format('embedded-opentype'),
+         url('http://localhost:3000/fonts/graublauweb-webfont.woff') format('woff'),
+         url('http://localhost:3000/fonts/graublauweb-webfont.ttf') format('truetype'),
+         url('http://localhost:3000/fonts/graublauweb-webfont.svg#GraublauWebRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}

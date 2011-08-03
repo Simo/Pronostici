@@ -3,4 +3,8 @@ class Round < ActiveRecord::Base
   belongs_to :champion
   belongs_to :legs
   has_many :games
+  
+  def self.turni_attuali(campionato,oggi)
+    where("champion_id = ? AND data > ?", campionato, oggi)
+  end
 end
