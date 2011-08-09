@@ -17,6 +17,8 @@ PronosticiR3::Application.routes.draw do
   
   match 'giornata' => "home#giornata", :as => "giornata"
   
+  match 'utente/:id' => "user#show", :as => "mostra_utente"
+  
   resources :home do
   	 collection do
   	 	post :create_plus

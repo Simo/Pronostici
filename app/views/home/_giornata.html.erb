@@ -15,11 +15,11 @@ Parliamo di campionato <%= @campionato %><br />
 						<%= f.hidden_field :round_id %>
 						<%= f.hidden_field :champion_id %>
 					  	
-					  	<div class="partita span-6">
+					  	<div class="partita">
 							<%=h @squadre_casa_sponsor[j] %> <%=h @squadre_casa[j]%> - <%=h @squadre_fuori_sponsor[j] %> <%=h @squadre_fuori[j]%>
 						</div>
 						
-						<div class="scommessa span-1 last">
+						<div class="scommessa">
 							<%= f.radio_button :bid, "1" %>  <%= f.radio_button :bid, "2" %>
 						</div>
 						
@@ -29,7 +29,7 @@ Parliamo di campionato <%= @campionato %><br />
 			<% j = j + 1 %>
 			<% end %><!-- each loop -->
 		</ul>
-	<div class="submit span-1 prepend-4 last">
+	<div class="submit">
 		<%= submit_tag 'Gioca'%>
 	</div>	
 <% end %>

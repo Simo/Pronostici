@@ -2,19 +2,17 @@
 <html>
 <head>
   <title>PronosticiR3</title>
-  <%= stylesheet_link_tag "screen", "ie", "master" %>
-  <%= stylesheet_link_tag "print", :media => "print" %>
+  <%= stylesheet_link_tag :all %>
   <%= javascript_include_tag "https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js", "jquery.rails.js" %>
   <%= csrf_meta_tag %>
 </head>
 <body>
-<div class="container showgrid">
+<div id="container">
 	
-	<div id="header" class="span-12 last">
-		<div class="spazio25"></div>
-		<div id="user_nav" class="span-6 prepend-6">  
+	<div id="header">
+		<div id="user_nav">  
 		  <% if user_signed_in? %>  
-		    Signed in as <%= current_user.email %>. Not you?  
+		    Signed in as <%= link_to current_user.email, mostra_utente_path(current_user) %>. Not you?  
 		    <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>  
 		  <% else %>  
 		    <%= link_to "Sign up", new_user_registration_path %> or  
@@ -25,11 +23,11 @@
 	<div id="banner_notices">
 		<% flash_messages %>
 	</div>
-	<div id="content" class="span-12 last">
+	<div id="content">
 		<%= yield %>
 	</div>
 	
-	<div id="footer" class="span-12 last">
+	<div id="footer">
 		All rights reserved - Code & Design property of Simone Bierti
 	</div>
 	
