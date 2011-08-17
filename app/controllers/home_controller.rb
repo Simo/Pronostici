@@ -3,31 +3,55 @@ class HomeController < ApplicationController
   def index
   	@campionati = Champion.order(:priority)
   end
-	
-  def giornata
+  
+  def valuta
     
     # data
     oggi = Date.today
     ieri = Date.parse('2011-07-21')
     
-    # request parameters
-    campionato = params[:cmp]
-    turno = params[:trn]
+    #parametri
     @campionato = params[:cmp]
-    @turno = params[:trn]
+    campionato = params[:cmp]
+    
+    #istanze
+    giornata = Round.turni_attuali(campionato,ieri).first
+    @giocate = Bet.giocate(giornata,current_user.id)
+    
+    #logica dietro al redirect
+    if @giocate.blank?
+      redirect_to :action => "giornata", :cmp => params[:cmp], :trn => giornata, :format => :js #se l'utente non ha ancora inserito pronostici per la categoria/giornata va a "_giornata"
+    else
+      redirect_to :action => "valutato", :cmp => params[:cmp], :trn => giornata, :format => :js #se l'utente ha già inserito pronostici va a "_valutato"
+    end
+    
+  end
+  
+  def valutato
     
     # istanze
-    @giornata = Round.turni_attuali(campionato,ieri)
-    giornata = @giornata[0].id
+    @giocate = Bet.giocate(params[:trn],current_user.id)
+    
+    respond_to do |format|
+        format.html
+        format.js {render :layout => false}
+    end
+    
+  end
+	
+  def giornata
+    
+    # istanze
+    giornata = params[:trn]
   	@partite = Game.where(:round_id => giornata)
     @bets = Array.new(@partite.size)
     @squadre_casa = Array.new(@partite.size)
     @squadre_casa_sponsor = Array.new(@partite.size)
     @squadre_fuori = Array.new(@partite.size)
     @squadre_fuori_sponsor = Array.new(@partite.size)
-  	
-  	j = 0
-  	i = 0
+    
+    #counter
+    i = 0
   	
   	#con un loop tra le partite creo una scommessa ogni partita e registro i dati della partita
     #stessa su degli array a parte
@@ -38,12 +62,12 @@ class HomeController < ApplicationController
          @squadre_fuori_sponsor[i]= p.away_team.sponsor
          @bets[i] = Bet.new( :user_id => current_user.id, :game_id => p.id, :round_id => p.round_id, :champion_id => p.round.champion_id)
          i = i + 1
-	end
-  	
-  	respond_to do |format|
-		format.html
-		format.js {render :layout => false}
-	end
+	   end
+	   
+	   respond_to do |format|
+        format.html
+        format.js {render :layout => false}
+	   end
 	
   end
   

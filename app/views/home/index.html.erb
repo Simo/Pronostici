@@ -6,7 +6,7 @@
 			<ul>
 				<% @campionati.each do |f| %>
 					<li>
-						<%= link_to f.nome_campionato, giornata_path(:cmp => "#{f.id}"), :remote => true %>
+						<%= link_to f.nome_campionato, valuta_path(:cmp => "#{f.id}"), :remote => true %>
 					</li>	
 				<% end %>
 			</ul>

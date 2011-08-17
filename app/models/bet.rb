@@ -4,4 +4,8 @@ class Bet < ActiveRecord::Base
   belongs_to :round
   belongs_to :champion
   belongs_to :user
+  
+  def self.giocate(giornata,utente)
+    where("round_id = ? AND user_id = ?", giornata, utente)
+  end
 end

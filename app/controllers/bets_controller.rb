@@ -1,6 +1,6 @@
 class BetsController < ApplicationController
   def index
-    @bets = Bet.all
+    @bets = Bet.all    
   end
 
   def show

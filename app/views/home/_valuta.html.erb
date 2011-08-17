@@ -1,0 +1,12 @@
+<h1>Ciao Mondo, sono la view valuta</h1>
+<br />
+hai selezionato il campionato <%= @campionato %>.<br />
+il tuo nome utente è: <%= @user.username %><br />
+<hr />
+i turni in questione sono questi:<br />
+<% @giornate.each do |turno| %>
+	<strong><%= turno.nome_turno %></strong><br />
+<% end %>
+<hr />
+<%= @giornata %>
+<hr />

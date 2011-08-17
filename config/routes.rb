@@ -15,9 +15,13 @@ PronosticiR3::Application.routes.draw do
 
   resources :bets
   
+  match 'valuta' => "home#valuta", :as => "valuta"
+  
+  match 'valutato' => "home#valutato", :as => "valutato"
+    
   match 'giornata' => "home#giornata", :as => "giornata"
   
-  match 'utente/:id' => "user#show", :as => "mostra_utente"
+  match 'utenti/:id' => "user#show", :as => "mostra_utente"
   
   resources :home do
   	 collection do

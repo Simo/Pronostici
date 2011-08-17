@@ -1,7 +1,4 @@
 Parliamo di campionato <%= @campionato %><br />
-<% @giornata.each do |o|%>
-	<%= o.id %>; 
-<% end %>
 
 <%= form_tag :action => :create_plus, :method => :post do %>
 		<ul>
