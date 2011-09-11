@@ -1,1 +1,3 @@
+$('li').removeClass("evidenziato");
+$('li#campionato_<%= @campionato %>').addClass("evidenziato");
 $('#schedina').html("<%= escape_javascript(render(:partial => "giornata"))%>");

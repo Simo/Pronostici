@@ -30,6 +30,7 @@ class HomeController < ApplicationController
   def valutato
     
     # istanze
+    @campionato = params[:cmp]
     @giocate = Bet.giocate(params[:trn],current_user.id)
     
     respond_to do |format|
@@ -42,6 +43,7 @@ class HomeController < ApplicationController
   def giornata
     
     # istanze
+    @campionato = params[:cmp]
     giornata = params[:trn]
   	@partite = Game.where(:round_id => giornata)
     @bets = Array.new(@partite.size)

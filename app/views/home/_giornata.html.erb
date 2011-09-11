@@ -5,23 +5,25 @@ Parliamo di campionato <%= @campionato %><br />
 			<% j = 0 %>
 			<% @bets.each_with_index do |bet, index| %>
 				<li>
+					<table>
 					<%= fields_for "bets[#{index}]", bet do |f| %>
 						
 					  	<%= f.hidden_field :user_id %>
 					  	<%= f.hidden_field :game_id %>
 						<%= f.hidden_field :round_id %>
 						<%= f.hidden_field :champion_id %>
-					  	
+					  	<tr>
 					  	<div class="partita">
-							<%=h @squadre_casa_sponsor[j] %> <%=h @squadre_casa[j]%> - <%=h @squadre_fuori_sponsor[j] %> <%=h @squadre_fuori[j]%>
+							<td width="220px" align="right"><%=h @squadre_casa_sponsor[j] %><!-- <%=h @squadre_casa[j]%>--></td><td width="20px" align="center"> - </td><td width="220px"><%=h @squadre_fuori_sponsor[j] %><!-- <%=h @squadre_fuori[j]%>--></td>
 						</div>
-						
+						<td width="50px">
 						<div class="scommessa">
 							<%= f.radio_button :bid, "1" %>  <%= f.radio_button :bid, "2" %>
 						</div>
-						
-						
+						</td>
+						</tr>
 					<% end %>
+					</table>
 				</li>
 			<% j = j + 1 %>
 			<% end %><!-- each loop -->
