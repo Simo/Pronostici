@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  user_id: 1
+  champion_id: 1
+  points: 1.5
+  last_round: 1
+  times: 1
+
+two:
+  user_id: 1
+  champion_id: 1
+  points: 1.5
+  last_round: 1
+  times: 1

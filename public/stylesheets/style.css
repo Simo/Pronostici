@@ -1,3 +1,11 @@
+#barraSX {
+	display: inline;	    
+  }
+ 
+#schedina {
+	display: inline;
+}
+
 .evidenziato {
 	font-weight: bold;
 }

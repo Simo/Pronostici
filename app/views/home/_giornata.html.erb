@@ -1,4 +1,4 @@
-Parliamo di campionato <%= @campionato %><br />
+Inserisci i tuoi pronostici per la <%= @giornata.nome_breve %>ª giornata di <%= @campionato.nome_campionato %><br />
 
 <%= form_tag :action => :create_plus, :method => :post do %>
 		<ul>
@@ -7,7 +7,6 @@ Parliamo di campionato <%= @campionato %><br />
 				<li>
 					<table>
 					<%= fields_for "bets[#{index}]", bet do |f| %>
-						
 					  	<%= f.hidden_field :user_id %>
 					  	<%= f.hidden_field :game_id %>
 						<%= f.hidden_field :round_id %>

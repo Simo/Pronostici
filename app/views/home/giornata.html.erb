@@ -1,30 +1,5 @@
-<%= form_tag :action => :create_plus, :method => :post do %>
-		<ul>
-			<% j = 0 %>
-			<% @bets.each_with_index do |bet, index| %>
-				<li>
-					<%= fields_for "bets[#{index}]", bet do |f| %>
-					  	
-					  	<%= f.hidden_field :user_id %>
-					  	<%= f.hidden_field :game_id %>
-						<%= f.hidden_field :round_id %>
-						<%= f.hidden_field :champion_id %>
-					  	
-					  	<div class="partita">
-								<%=h @squadre_casa_sponsor[j] %> <%=h @squadre_casa[j]%> - <%=h @squadre_fuori_sponsor[j] %> <%=h @squadre_fuori[j]%>
-						</div>
-						
-						<div class="scommessa">
-							<%= f.radio_button :bid, "1" %>  <%= f.radio_button :bid, "2" %>
-						</div>
-						
-						
-					<% end %>
-				</li>
-			<% j = j + 1 %>
-			<% end %><!-- each loop -->
-		</ul>
-	<div class="submit">
-		<%= submit_tag "Gioca"%>
-	</div>	
+<% if @giocate.blank? %>
+	<%= render :partial => "giornata"%>
+<% else %>
+	<%= render :partial => "valutato"%>
 <% end %>

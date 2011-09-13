@@ -1,3 +1,9 @@
-$('li').removeClass("evidenziato");
-$('li#campionato_<%= @campionato %>').addClass("evidenziato");
-$('#schedina').html("<%= escape_javascript(render(:partial => "giornata"))%>");
+<% if @giocate.blank? %>
+	$('li').removeClass("evidenziato");
+	$('li#campionato_<%= @campionato %>').addClass("evidenziato");
+	$('#schedina').html("<%= escape_javascript(render(:partial => "giornata"))%>");
+<% else %>
+	$('li').removeClass("evidenziato");
+	$('li#campionato_<%= @campionato %>').addClass("evidenziato");
+	$('#schedina').html("<%= escape_javascript(render(:partial => "valutato"))%>");
+<% end %>
