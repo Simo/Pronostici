@@ -4,34 +4,36 @@ class HomeController < ApplicationController
   	@campionati = Champion.order(:priority)
   end
   
-  def valuta
-    
-    # data
-    oggi = Date.today
-    ieri = Date.parse('2011-10-09')
-    
+  #def valuta
+  #  
+  #  # data
+  #  oggi = Date.today
+  #  ieri = Date.parse('2011-10-09')
+  #  
     #parametri
-    @campionato = params[:cmp]
-    campionato = params[:cmp]
-    
+  #  @campionato = params[:cmp]
+  #  campionato = params[:cmp]
+  #  
     #istanze
-    giornata = Round.turni_attuali(campionato,oggi).first
-    @giocate = Bet.giocate(giornata,current_user.id)
-    
+  #  giornata = Round.turni_attuali(campionato,oggi).first
+  #  @giocate = Bet.giocate(giornata,current_user.id)
+  #  
     #logica dietro al redirect
-    if @giocate.blank?
-      redirect_to :action => "giornata", :cmp => params[:cmp], :trn => giornata #:format => :js se l'utente non ha ancora inserito pronostici per la categoria/giornata va a "_giornata"
-    else
-      redirect_to :action => "valutato", :cmp => params[:cmp], :trn => giornata #:format => :js se l'utente ha già inserito pronostici va a "_valutato"
-    end
+  #  if @giocate.blank?
+  #    redirect_to :action => "giornata", :cmp => params[:cmp], :trn => giornata #:format => :js se l'utente non ha ancora inserito pronostici per la categoria/giornata va a "_giornata"
+  #  else
+  #    redirect_to :action => "valutato", :cmp => params[:cmp], :trn => giornata #:format => :js se l'utente ha già inserito pronostici va a "_valutato"
+  #  end
     
-  end
+  #end
   
   def valutato
     
+    oggi = Date.today
+    ieri = Date.parse('2011-10-09')
+    
     # istanze
     camp = params[:cmp]
-    oggi = Date.today
     gior = Round.turni_attuali(camp,oggi).first
     @giocate = Bet.giocate(gior,current_user.id)
     @giornata = Round.find(gior)
